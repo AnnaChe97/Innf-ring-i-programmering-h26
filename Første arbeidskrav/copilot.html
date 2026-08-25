@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell tegn</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+
+    <h1>Tell tegn i et ord</h1>
+
+    <input id="ordInput" type="text" placeholder="Skriv inn et ord"
+           style="padding: 8px; font-size: 16px;">
+
+    <button onclick="tellTegn()"
+            style="padding: 8px 12px; font-size: 16px; margin-left: 5px;">
+        Sjekk
+    </button>
+
+    <p id="resultat" style="margin-top: 15px;"></p>
+
+    <script>
+        function tellTegn() {
+            const ord = document.getElementById('ordInput').value;
+            const antallTegn = ord.length;
+
+            document.getElementById('resultat').textContent =
+                `Ordet ${ord} består av ${antallTegn} tegn`;
+        }
+    </script>
+
+</body>
+</html>

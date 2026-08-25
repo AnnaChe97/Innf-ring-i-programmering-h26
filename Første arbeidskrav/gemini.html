@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tell tegn i ord</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #resultat {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Tell tegn i et ord</h2>
+    <input type="text" id="ordInput" placeholder="Skriv et ord her...">
+    <button onclick="tellTegn()">Tell tegn</button>
+
+    <p id="resultat"></p>
+  </div>
+
+  <script>
+    function tellTegn() {
+      const inputFelt = document.getElementById("ordInput");
+      const resultatFelt = document.getElementById("resultat");
+      const ord = inputFelt.value;
+
+      if (ord.trim() === "") {
+        resultatFelt.textContent = "Vennligst skriv inn et ord først.";
+        return;
+      }
+
+      const antallTegn = ord.length;
+      resultatFelt.textContent = `Ordet '${ord}' består av ${antallTegn} tegn.`;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Tegnteller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label, input, button, p {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #resultat {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tegn-teller</h1>
+
+    <label for="ordInput">Skriv inn et ord:</label>
+    <input type="text" id="ordInput" placeholder="Skriv et ord her">
+    <button onclick="tellTegn()">Tell tegn</button>
+
+    <p id="resultat"></p>
+
+    <script>
+        function tellTegn() {
+            var ord = document.getElementById("ordInput").value;
+            var antallTegn = ord.length;
+            var melding = "Ordet " + ord + " består av " + antallTegn + " tegn";
+            document.getElementById("resultat").textContent = melding;
+        }
+    </script>
+
+</body>
+</html>
