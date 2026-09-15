@@ -14,7 +14,7 @@
     </ul>
     <h1>Array for bok med flere forfattere</h1>
     <ul>
-        <li>Tittel: <span id="book2TittelSpan"></span></li>
+        <li>Tittel: <span id="book2TitleSpan"></span></li>
         <li>Forfattere: <span id="book2AuthorSpan"></span></li>
         <li>Antall sider: <span id="book2PageCountSpan"></span></li>
     </ul>
@@ -23,7 +23,7 @@
     <ul>
         <li>Tittel: <span id="book3TitleSpan"></span></li>
         <li>Forfatter(e): <span id="book3AuthorSpan"></span></li>
-        <li>Antall sider: <span id="book3PageCounter"></span></li>
+        <li>Antall sider: <span id="book3PageCountSpan"></span></li>
     </ul>
 
     <script>
@@ -54,7 +54,17 @@
 
         //Print info fra book2 til HTML
         document.getElementById("book2TitleSpan").innerHTML = book2[0],
-        document.getElementById("book2AuthorSpan").innerHTML = book2[1]
+        document.getElementById("book2AuthorSpan").innerHTML = book2[1] + ", " + book2[2],
+        document.getElementById("book2PageCountSpan").innerHTML = book2[3]
+        
+        //Print info fra book3 til HTML
+        //book3 er ett objekt, må derfor referere til nøkler i steder for indexer
+        document.getElementById("book3TitleSpan").innerHTML = book3.title
+        document.getElementById("book3AuthorSpan").innerHTML = book3.author
+        document.getElementById("book3PageCountSpan").innerHTML = book3.pagecount
+
+
+
     </script>
 </body>
 </html>
