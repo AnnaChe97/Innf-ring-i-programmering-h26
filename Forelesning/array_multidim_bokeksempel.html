@@ -46,7 +46,7 @@
 
         //Bruker .map for å hente alle bøker, og bygger HTML i booksHTML-variabelen
         let booksHTML = ""
-        bokregister.map(b => {booksHTML += '<article><h3>${b.title}</h3></article>'})
+        bokregister.map(b => {booksHTML += `<article><h3>${b.title}</h3></article>`})
         console.log("booksHTML")
 
         document.getElementById("books").innerHTML = booksHTML
