@@ -9,10 +9,36 @@
 <body>
     <script>
         const people = ["Marius", "Tore", "Susanne", "Monica", "Arne", "Zoltan", "Beate"]
+        
+        function printNames(array){
+            //Sortere array
+            array.sort()
 
-        function sortArray (array){
-            console.log(array)
+            //Lage et ul-element
+            const ul = document.createElement("ul")
+
+            //Fylle ul-listen med listeelementer med navn
+            array.map(person => {
+                //Lage en <li> (listeleement)
+                const li = document.createElement("li")
+
+                //Få navnet i "person"-parameteret nn i <li>
+                    li.innerHTML = person
+                    
+                    //Legge li-elementet inn i ul
+                    ul.appendChild(li)
+                })
+
+            //Testutskrift
+            console.log(ul)
+
+            //Legge <ul>-listen på nettsiden:
+            document.body.appendChild(ul)
         }
+        //Kjøre funksjonen
+        printNames(people)
+
+
     </script>
 </body>
 </html>
