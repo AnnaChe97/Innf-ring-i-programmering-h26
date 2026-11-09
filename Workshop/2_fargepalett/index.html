@@ -24,16 +24,14 @@
         #colors > div > span {
             position: absolute;
             bottom: 0;
-            left: 0;
-            background: #ffff;
+            right: 0;
+            background: #0000;
             padding: 0.5rem;
             font-size: 1.5rem;
         }
     </style>
 </head>
 <body>
-    <p>ER DETTE RIKTIG FIL?</p>
-    
     <section id="colors">
 
     </section>
@@ -76,7 +74,7 @@
             `
             console.log(HTML)
 
-            document.getElementById("colors").innerHMTL += HTML
+            document.getElementById("colors").innerHTML += HTML
         })
 
         //Test array:
